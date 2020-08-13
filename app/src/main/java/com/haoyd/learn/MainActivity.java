@@ -70,7 +70,7 @@ class MainAdapter extends RecyclerView.Adapter<MyHolder> {
     }
 
     private void initData() {
-        add("生命周期-页面1", Lifecycle1Activity.class);
+        add("Activity 生命周期-页面1", Lifecycle1Activity.class);
     }
 
     private void add(String name, Class<?> cls) {

@@ -71,7 +71,7 @@ public class Lifecycle1Activity extends BaseActivity {
 
     public void jump(View view) {
         Intent intent = new Intent(this, Lifecycle2Activity.class);
-        intent.putExtra("pageTitle", "生命周期-页面2");
+        intent.putExtra("pageTitle", "Activity 生命周期-页面2");
         startActivity(intent);
     }
 

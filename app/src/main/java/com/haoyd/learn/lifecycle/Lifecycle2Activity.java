@@ -2,8 +2,10 @@ package com.haoyd.learn.lifecycle;
 
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.view.View;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 
 import com.haoyd.learn.R;
 import com.haoyd.learn.common.BaseActivity;
@@ -64,5 +66,14 @@ public class Lifecycle2Activity extends BaseActivity {
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         LogUtil.getInstance().add(tag, "onRestoreInstanceState");
+    }
+
+    public void showAlert(View view) {
+        new AlertDialog.Builder(this)
+                .setTitle("弹窗")
+                .setMessage("测试弹窗改变生命周期")
+                .setPositiveButton("确定", null)
+                .setCancelable(false)
+                .show();
     }
 }

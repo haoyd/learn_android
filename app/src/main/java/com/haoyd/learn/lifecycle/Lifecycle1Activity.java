@@ -78,9 +78,13 @@ public class Lifecycle1Activity extends BaseActivity {
     public void showAlert(View view) {
         new AlertDialog.Builder(this)
                 .setTitle("弹窗")
-                .setMessage("弹窗改变生命周期")
+                .setMessage("测试弹窗改变生命周期")
                 .setPositiveButton("确定", null)
                 .setCancelable(false)
                 .show();
+    }
+
+    public void showDialogActivity(View view) {
+        startActivity(new Intent(this, LifecycleDialogActivity.class));
     }
 }

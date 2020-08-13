@@ -20,4 +20,11 @@
         android:text="弹窗"
         android:onClick="showAlert"></Button>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="弹窗式 Activity"
+        android:textAllCaps="false"
+        android:onClick="showDialogActivity"></Button>
+
 </LinearLayout>

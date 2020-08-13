@@ -87,4 +87,11 @@ public class Lifecycle1Activity extends BaseActivity {
     public void showDialogActivity(View view) {
         startActivity(new Intent(this, LifecycleDialogActivity.class));
     }
+
+    public void clickHome(View view) {
+        Intent i = new Intent(Intent.ACTION_MAIN);
+        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // android提示如果是服务里调用，必须加入new task标识
+        i.addCategory(Intent.CATEGORY_HOME);
+        startActivity(i);
+    }
 }

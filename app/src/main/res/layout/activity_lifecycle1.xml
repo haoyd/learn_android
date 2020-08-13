@@ -27,4 +27,11 @@
         android:textAllCaps="false"
         android:onClick="showDialogActivity"></Button>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="模拟按下 Home 键"
+        android:textAllCaps="false"
+        android:onClick="clickHome"></Button>
+
 </LinearLayout>

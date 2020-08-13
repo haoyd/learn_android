@@ -10,6 +10,9 @@ public class LogUtil {
     private StringBuilder sb;
     private boolean isOpen = false;
 
+    // 程序会默认记录当前页面名称
+    private String curTag = "";
+
     private static LogUtil instance = new LogUtil();
 
     private LogUtil() {
@@ -20,12 +23,29 @@ public class LogUtil {
         return instance;
     }
 
+    /**
+     * 如果同一时间只是记录当前页面的日志，则不需要传入具体 tag
+     * @param msg
+     */
     public void add(String msg) {
         if (!isOpen || TextUtils.isEmpty(msg)) {
             return;
         }
 
-        sb.append(msg + "\n");
+        sb.append(curTag + " --> " + msg + "\n");
+    }
+
+    /**
+     * 如果同一时间会有多个页面输出日志，则需要传入相应的 tag
+     * @param tag
+     * @param msg
+     */
+    public void add(String tag, String msg) {
+        if (!isOpen || TextUtils.isEmpty(tag) || TextUtils.isEmpty(msg)) {
+            return;
+        }
+
+        sb.append(tag + " --> " + msg + "\n");
     }
 
     public String getMsg() {
@@ -46,6 +66,10 @@ public class LogUtil {
 
     public void setOpen(boolean open) {
         isOpen = open;
+    }
+
+    public void setCurTag(String curTag) {
+        this.curTag = curTag;
     }
 
     public void showDialog(Context context) {

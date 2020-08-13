@@ -14,12 +14,23 @@ import com.haoyd.learn.R;
 
 public class BaseActivity extends AppCompatActivity {
 
+    protected String tag = "BaseActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        tag = getClass().getSimpleName();
+
         processIntent();
         setView();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        // 考虑到跳转到下一个页面再跳回来后依然需要更新当前 tag，需要在该生命周期更新当前 tag
+        LogUtil.getInstance().setCurTag(tag);
     }
 
     private void processIntent() {

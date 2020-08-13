@@ -72,7 +72,7 @@ public class LogUtil {
         this.curTag = curTag;
     }
 
-    public void showDialog(Context context) {
+    public void showLog(Context context) {
         new AlertDialog.Builder(context)
                 .setTitle("日志记录")
                 .setMessage(getMsg())

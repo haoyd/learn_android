@@ -70,7 +70,7 @@ public class BaseActivity extends AppCompatActivity {
                 LogUtil.getInstance().setOpen(false);
                 break;
             case R.id.m3:
-                LogUtil.getInstance().showDialog(this);
+                LogUtil.getInstance().showLog(this);
                 break;
             case R.id.m4:
                 LogUtil.getInstance().clear();

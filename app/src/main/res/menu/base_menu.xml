@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/m1"
+        app:showAsAction="never"
+        android:title="开始记录" />
+    <item
+        android:id="@+id/m2"
+        app:showAsAction="never"
+        android:title="停止记录" />
+    <item
+        android:id="@+id/m3"
+        app:showAsAction="never"
+        android:title="显示" />
+    <item
+        android:id="@+id/m4"
+        app:showAsAction="never"
+        android:title="清除" />
+</menu>

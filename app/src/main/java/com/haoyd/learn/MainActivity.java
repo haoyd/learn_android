@@ -9,14 +9,16 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.haoyd.learn.common.BaseActivity;
+import com.haoyd.learn.lifecycle.Lifecycle1Activity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private RecyclerView listView;
     private MainAdapter adapter;
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle("主页");
 
         listView = findViewById(R.id.rv_main);
         listView.setLayoutManager(new LinearLayoutManager(this));
@@ -52,6 +55,7 @@ class MainAdapter extends RecyclerView.Adapter<MyHolder> {
         textView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         textView.setBackground(itemBg);
         textView.setPadding(30, 40, 30, 40);
+        textView.setTextColor(context.getColor(android.R.color.black));
         return new MyHolder(textView);
     }
 
@@ -66,7 +70,11 @@ class MainAdapter extends RecyclerView.Adapter<MyHolder> {
     }
 
     private void initData() {
-        list.add(new PageModel("测试页面", MainActivity.class));
+        add("生命周期-页面1", Lifecycle1Activity.class);
+    }
+
+    private void add(String name, Class<?> cls) {
+        list.add(new PageModel(name, cls));
     }
 }
 
@@ -87,6 +95,7 @@ class MyHolder extends RecyclerView.ViewHolder {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(itemView.getContext(), pageModel.cls);
+                intent.putExtra("pageTitle", pageModel.desc);
                 itemView.getContext().startActivity(intent);
             }
         });

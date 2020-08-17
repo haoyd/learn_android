@@ -57,8 +57,8 @@ public class Lifecycle2Activity extends BaseActivity {
     }
 
     @Override
-    public void onSaveInstanceState(@NonNull Bundle outState, @NonNull PersistableBundle outPersistentState) {
-        super.onSaveInstanceState(outState, outPersistentState);
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
         LogUtil.getInstance().add(tag, "onSaveInstanceState");
     }
 

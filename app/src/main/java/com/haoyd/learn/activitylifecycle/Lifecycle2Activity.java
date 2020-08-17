@@ -1,8 +1,6 @@
-package com.haoyd.learn.lifecycle;
+package com.haoyd.learn.activitylifecycle;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.view.View;
 
 import androidx.annotation.NonNull;
@@ -12,12 +10,12 @@ import com.haoyd.learn.R;
 import com.haoyd.learn.common.BaseActivity;
 import com.haoyd.learn.common.LogUtil;
 
-public class Lifecycle1Activity extends BaseActivity {
+public class Lifecycle2Activity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lifecycle1);
+        setContentView(R.layout.activity_lifecycle2);
         LogUtil.getInstance().add(tag, "onCreate");
     }
 
@@ -69,12 +67,6 @@ public class Lifecycle1Activity extends BaseActivity {
         LogUtil.getInstance().add(tag, "onRestoreInstanceState");
     }
 
-    public void jump(View view) {
-        Intent intent = new Intent(this, Lifecycle2Activity.class);
-        intent.putExtra("pageTitle", "Activity 生命周期-页面2");
-        startActivity(intent);
-    }
-
     public void showAlert(View view) {
         new AlertDialog.Builder(this)
                 .setTitle("弹窗")
@@ -82,16 +74,5 @@ public class Lifecycle1Activity extends BaseActivity {
                 .setPositiveButton("确定", null)
                 .setCancelable(false)
                 .show();
-    }
-
-    public void showDialogActivity(View view) {
-        startActivity(new Intent(this, LifecycleDialogActivity.class));
-    }
-
-    public void clickHome(View view) {
-        Intent i = new Intent(Intent.ACTION_MAIN);
-        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // android提示如果是服务里调用，必须加入new task标识
-        i.addCategory(Intent.CATEGORY_HOME);
-        startActivity(i);
     }
 }

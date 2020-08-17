@@ -1,4 +1,4 @@
-package com.haoyd.learn.lifecycle;
+package com.haoyd.learn.activitylifecycle;
 
 import android.os.Bundle;
 import android.view.WindowManager;

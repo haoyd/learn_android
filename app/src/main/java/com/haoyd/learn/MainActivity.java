@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.haoyd.learn.common.BaseActivity;
 import com.haoyd.learn.activitylifecycle.Lifecycle1Activity;
+import com.haoyd.learn.fragmentlifecycle.LifecycleFragmentActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -71,6 +72,7 @@ class MainAdapter extends RecyclerView.Adapter<MyHolder> {
 
     private void initData() {
         add("Activity 生命周期-页面1", Lifecycle1Activity.class);
+        add("Fragment 生命周期", LifecycleFragmentActivity.class);
     }
 
     private void add(String name, Class<?> cls) {

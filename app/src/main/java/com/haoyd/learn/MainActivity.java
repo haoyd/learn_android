@@ -73,6 +73,15 @@ class MainAdapter extends RecyclerView.Adapter<MyHolder> {
     private void initData() {
         add("Activity 生命周期-页面1", Lifecycle1Activity.class);
         add("Fragment 生命周期", LifecycleFragmentActivity.class);
+
+        // TODO: 还需要写的 demo
+        /**
+         * 启动模式
+         * 事件分发
+         * handler 原理
+         * context 操作
+         * 图片优化
+         */
     }
 
     private void add(String name, Class<?> cls) {

@@ -1,4 +1,4 @@
-package com.haoyd.learn.fragmentlifecycle;
+package com.haoyd.learn.functions.fragmentlifecycle;
 
 import android.os.Bundle;
 import android.view.View;

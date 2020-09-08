@@ -15,12 +15,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".fragmentlifecycle.LifecycleFragmentActivity"></activity>
+        <activity android:name=".functions.fragmentlifecycle.LifecycleFragmentActivity"></activity>
         <activity
-            android:name=".activitylifecycle.LifecycleDialogActivity"
+            android:name=".functions.activitylifecycle.LifecycleDialogActivity"
             android:theme="@style/dialogActivity" />
-        <activity android:name=".activitylifecycle.Lifecycle2Activity" />
-        <activity android:name=".activitylifecycle.Lifecycle1Activity" />
+        <activity android:name=".functions.activitylifecycle.Lifecycle2Activity" />
+        <activity android:name=".functions.activitylifecycle.Lifecycle1Activity" />
         <activity
             android:name=".common.MsgShowActivity"
             android:launchMode="singleTop" />

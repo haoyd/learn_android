@@ -1,4 +1,4 @@
-package com.haoyd.learn.activitylifecycle;
+package com.haoyd.learn.functions.activitylifecycle;
 
 import android.content.Intent;
 import android.os.Bundle;

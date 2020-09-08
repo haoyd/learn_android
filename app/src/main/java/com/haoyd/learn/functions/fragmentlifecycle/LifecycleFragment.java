@@ -1,4 +1,4 @@
-package com.haoyd.learn.fragmentlifecycle;
+package com.haoyd.learn.functions.fragmentlifecycle;
 
 
 import android.content.Context;
@@ -6,14 +6,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.haoyd.learn.R;
 import com.haoyd.learn.common.LogUtil;
-import com.haoyd.learn.common.MsgShowActivity;
 
 /**
  * A simple {@link Fragment} subclass.

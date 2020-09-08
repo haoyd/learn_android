@@ -13,8 +13,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.haoyd.learn.common.BaseActivity;
-import com.haoyd.learn.activitylifecycle.Lifecycle1Activity;
-import com.haoyd.learn.fragmentlifecycle.LifecycleFragmentActivity;
+import com.haoyd.learn.functions.activitylifecycle.Lifecycle1Activity;
+import com.haoyd.learn.functions.fragmentlifecycle.LifecycleFragmentActivity;
 
 import java.util.ArrayList;
 import java.util.List;

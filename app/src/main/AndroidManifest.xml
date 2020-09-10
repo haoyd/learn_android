@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".functions.fragmentlifecycle.LifecycleFragmentActivity"></activity>
+        <activity android:name=".functions.handler.HandlerActivity"></activity>
+        <activity android:name=".functions.fragmentlifecycle.LifecycleFragmentActivity" />
         <activity
             android:name=".functions.activitylifecycle.LifecycleDialogActivity"
             android:theme="@style/dialogActivity" />

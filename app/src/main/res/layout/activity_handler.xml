@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".functions.handler.HandlerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_handler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入耗时操作时间，单位：秒"
+            android:inputType="phone"></EditText>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="主线程耗时网络请求"
+            android:onClick="requestOnMainThread"></Button>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="子线程耗时网络请求"
+            android:onClick="requestOnChildThread"></Button>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_handler"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+</FrameLayout>

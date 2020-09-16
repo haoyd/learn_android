@@ -20,13 +20,15 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="主线程耗时网络请求"
+            android:text="耗时网络请求-main"
+            android:textAllCaps="false"
             android:onClick="requestOnMainThread"></Button>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="子线程耗时网络请求"
+            android:text="耗时网络请求-child"
+            android:textAllCaps="false"
             android:onClick="requestOnChildThread"></Button>
 
     </LinearLayout>
